@@ -5,7 +5,7 @@
 ## Propósito dessa aplicação
 
 - Uma aplicação que visa criar aventuras de RPG baseado no sistema D&D 5 edição, se utilizando da inteligência artificial e personagens que podem ser criados e armazenados em um banco de dados
-- Os personagens são divididos entre VILÕES, NPCs e JOGADORES
+
 
 ## Dependências utilizadas
 
