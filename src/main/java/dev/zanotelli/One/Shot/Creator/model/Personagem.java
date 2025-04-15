@@ -1,22 +1,30 @@
 package dev.zanotelli.One.Shot.Creator.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "character")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Personagem {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private Integer age;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Species race;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private CharacterClass characterClass;
+    @Column(nullable = false)
     private Integer level;
+
 
     public Long getId() {
         return id;
