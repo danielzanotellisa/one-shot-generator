@@ -20,12 +20,12 @@ public class PersonagemController {
 
     @GetMapping()
     public ResponseEntity<List<Personagem>> getAll() {
-        return ResponseEntity.ok(service.getAll);
+        return ResponseEntity.ok(service.getAll());
     }
 
     //POST
 
-    @PostMapping()
+    @PostMapping("/save")
     public ResponseEntity<Personagem> save(@RequestBody Personagem request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.save(request));
     }
