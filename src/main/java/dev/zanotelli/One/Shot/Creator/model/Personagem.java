@@ -18,11 +18,11 @@ public class Personagem {
     private Integer age;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Species race;
+    private Species species;
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, name = "character_class")
     private CharacterClass characterClass;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "character_level")
     private Integer level;
 
 
@@ -50,12 +50,12 @@ public class Personagem {
         this.age = age;
     }
 
-    public Species getRace() {
-        return race;
+    public Species getSpecies() {
+        return species;
     }
 
-    public void setRace(Species race) {
-        this.race = race;
+    public void setSpecies(Species species) {
+        this.species = species;
     }
 
     public CharacterClass getCharacterClass() {
